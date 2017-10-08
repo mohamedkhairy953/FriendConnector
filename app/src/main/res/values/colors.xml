@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="recycler_color">#6e807e</color>
+    <color name="map_btn_color">#e22525</color>
+    <color name="row_element_color">#621ea6</color>
+    <color name="item_color1">#b751f2</color>
+    <color name="item_color2">#8e24aa</color>
+    <color name="pressed_item_color1">#c8ff88</color>
+    <color name="pressed_item_color2">#c6ff00</color>
+</resources>
