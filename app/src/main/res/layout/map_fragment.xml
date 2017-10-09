@@ -3,9 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-   <include
-       layout="@layout/activity_maps"
-       />
+    <include layout="@layout/activity_maps" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,12 +12,14 @@
         >
 
         <Button
+            android:id="@+id/call_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
-            android:background="@color/map_btn_color"
+            android:background="@drawable/buttons_shape"
+            android:onClick="call"
             android:text="@string/call_btn_text" />
 
         <Button
@@ -28,7 +28,9 @@
             android:layout_marginLeft="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
-            android:background="@color/map_btn_color"
+            android:id="@+id/mail_btn"
+            android:onClick="sendEmail"
+            android:background="@drawable/buttons_shape"
             android:text="@string/e_mail_btn_text" />
 
         <Button
@@ -37,7 +39,9 @@
             android:layout_marginLeft="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
-            android:background="@color/map_btn_color"
+            android:id="@+id/sms_btn"
+            android:onClick="sendSms"
+            android:background="@drawable/buttons_shape"
             android:text="@string/send_message_btn_text" />
     </LinearLayout>
 

@@ -18,4 +18,10 @@ public interface ImainView {
     void onFriendsLoadFailure(String error);
 
     void onItemClicked(Button btn, ResponseFriends friend);
+
+    void onCall(ResponseFriends friends);
+
+    void onSms(String number);
+
+    void onEmail(String email);
 }
