@@ -3,6 +3,7 @@ package com.example.moham.mvp_rx_dagg_ret1.mvp.presenter.fetch_friends;
 import android.widget.Button;
 
 import com.example.moham.mvp_rx_dagg_ret1.model.ResponseFriends;
+import com.example.moham.mvp_rx_dagg_ret1.mvp.adapter.RcycleAdapter;
 import com.example.moham.mvp_rx_dagg_ret1.mvp.view.I_FriendsListView;
 import com.example.moham.mvp_rx_dagg_ret1.mvp.view.ImainView;
 
@@ -18,6 +19,7 @@ public class MainActivityPresenter implements I_MainActivityPresenter, OnGetFrie
     private ImainView view;
     private List<ResponseFriends> friendsList;
     private Button previousButton;
+    private int selectedItemPosition = -1;
 
 
     public List<ResponseFriends> getFriendsList() {
@@ -53,11 +55,37 @@ public class MainActivityPresenter implements I_MainActivityPresenter, OnGetFrie
         }
         previousButton = btn;
         btn.setSelected(true);
+        selectedItemPosition = Position;
     }
 
     @Override
     public int listSize() {
         return friendsList.size();
+    }
+
+    @Override
+    public void onCallClicked() {
+        if (selectedItemPosition == -1) {
+            return;
+        }
+        view.onCall(friendsList.get(selectedItemPosition));
+    }
+
+    @Override
+    public void onSmsClicked() {
+        if (selectedItemPosition == -1) {
+            return;
+        }
+        view.onSms(friendsList.get(selectedItemPosition).getCall());
+
+    }
+
+    @Override
+    public void onEmailClicked() {
+        if (selectedItemPosition == -1) {
+            return;
+        }
+        view.onEmail(friendsList.get(selectedItemPosition).getEmail());
     }
 
 

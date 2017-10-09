@@ -29,13 +29,13 @@ public class RcycleAdapter extends RecyclerView.Adapter<RcycleAdapter.VHolder> {
     }
 
     @Override
-    public void onBindViewHolder(final VHolder holder, final int position) {
+    public void onBindViewHolder(final VHolder holder, int position) {
+        final int p=position;
         presenter.onBindView(holder,position);
         holder.myItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                presenter.onItemClicked((Button) view,position);
-
+                presenter.onItemClicked((Button) view,p);
             }
         });
     }
@@ -46,7 +46,7 @@ public class RcycleAdapter extends RecyclerView.Adapter<RcycleAdapter.VHolder> {
     }
 
     public static class VHolder extends RecyclerView.ViewHolder implements I_FriendsListView {
-       public Button myItem;
+       Button myItem;
          VHolder(View itemView) {
             super(itemView);
             myItem=itemView.findViewById(R.id.row_element_btn_id);

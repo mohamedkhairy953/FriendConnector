@@ -10,4 +10,7 @@
     <color name="item_color2">#8e24aa</color>
     <color name="pressed_item_color1">#c8ff88</color>
     <color name="pressed_item_color2">#c6ff00</color>
+    <color name="pressed_button_clr1">#3b13ed</color>
+    <color name="pressed_button_clr2">#b10fe7</color>
+    <color name="map_btn_color2">#ac047d</color>
 </resources>
